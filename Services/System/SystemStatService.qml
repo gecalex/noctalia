@@ -1165,7 +1165,7 @@ Singleton {
   // Only physical interfaces (eth*, en*, wl*, ww*) are kept so
   // that traffic routed through VPNs, Docker bridges, etc. is
   // not double-counted.
-  readonly property var _virtualPrefixes: ["lo", "docker", "veth", "br-", "virbr", "vnet", "tun", "tap", "wg", "tailscale", "nordlynx", "proton", "mullvad", "flannel", "cni", "cali", "vxlan", "genev", "gre", "sit", "ip6tnl", "dummy", "ifb", "nlmon", "bond"]
+  readonly property var _virtualPrefixes: ["lo", "sing", "docker", "veth", "br-", "virbr", "vnet", "tun", "tap", "wg", "tailscale", "nordlynx", "proton", "mullvad", "flannel", "cni", "cali", "vxlan", "genev", "gre", "sit", "ip6tnl", "dummy", "ifb", "nlmon", "bond"]
 
   function isVirtualInterface(name) {
     for (let i = 0; i < _virtualPrefixes.length; ++i) {
